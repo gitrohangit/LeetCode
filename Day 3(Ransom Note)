@@ -1,0 +1,23 @@
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        if (magazine.length() < ransomNote.length()) return false;
+        
+        int[] mag = new int[magazine.length()];
+        
+        for (char c : magazine.toCharArray())
+            mag[c]++;
+        
+        for (char c : ransomNote.toCharArray())
+        {
+            mag[c]--;
+            if(mag[c] < 0)
+                return false;
+        }
+        
+        return true;
+        
+    }
+}
+
+Time Complexity: O(m+rn)
+Space Complexity: O(m)
