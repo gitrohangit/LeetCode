@@ -22,6 +22,6 @@ class Solution {
     }
 }
 
-I used hash set and it's O(1) time to check if it contains an element.
+I used hashmap and it's O(1) time to check if it contains an element.
 So the total time complexity will be O(J+S), instead of O(JS)
 Space is O(J)
